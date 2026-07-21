@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="chamiseul" /><link rel="canonical" href="http://127.0.0/" />
+      <link rel="shortcut icon" href="img/favicon.ico" />
+    <title>Welcome to MetaBridgeForge - MetaBridgeForge_Wiki</title>
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="custom.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Welcome to MetaBridgeForge";
+        var mkdocs_page_input_path = "index.md";
+        var mkdocs_page_url = "/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="." class="icon icon-home"> MetaBridgeForge_Wiki
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">MetaBridgeForge Guide</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Welcome to MetaBridgeForge</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#menu-location">Menu Location</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#templates-bundled-no-project-setup-needed">Templates: Bundled, No Project Setup Needed</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#how-to-edit-configpy-optional-only-for-using-your-own-project-templates">How to edit config.py (optional — only for using your own project templates)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#import-outfit-fbx">Import Outfit FBX...</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#import-groom-abc">Import Groom ABC...</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#out-of-automated-scope-manual-work">Out of Automated Scope (manual work)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#if-something-goes-wrong">If Something Goes Wrong</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#moving-to-another-projectcomputer">Moving to Another Project/Computer</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#version">Version</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="integration/">Strategy & Pipeline</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="integration/#the-core-world-class-groom-exporter">👑 The Core: World-Class Groom Exporter</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="integration/#experience-the-industry-leading-exporter">🚀 Experience the Industry-Leading Exporter</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href=".">MetaBridgeForge_Wiki</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">MetaBridgeForge Guide</li>
+      <li class="breadcrumb-item active">Welcome to MetaBridgeForge</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="metabridge-forge-user-guide-v11">MetaBridge Forge — User Guide (v1.1)</h1>
+<p><img alt="MetaBridgeForge04.png" src="assets/MetaBridgeForge04.png" /></p>
+<p>An editor plugin that automates MetaHuman outfit (clothing) and groom (hair) preparation. Aside from picking one FBX/Alembic file, everything from import through Wardrobe Item creation and verification happens automatically, with no manual steps in between.</p>
+<p><strong>Zero setup required</strong> — the template assets the pipelines are built on are bundled inside the plugin itself, so it works out of the box even in a brand-new project with an empty <code>Content/</code> folder. Just install the plugin and use the menu.</p>
+<h2 id="menu-location">Menu Location</h2>
+<p>Editor top menu: <strong>Tools &gt; MetaBridge Forge</strong></p>
+<ul>
+<li><strong>Import Outfit FBX...</strong> — full outfit (clothing) pipeline</li>
+<li><strong>Import Groom ABC...</strong> — full groom (hair) pipeline</li>
+</ul>
+<p>Both menu items only show a file-picker dialog; everything else is automatic. A popup only appears on failure.</p>
+<h2 id="templates-bundled-no-project-setup-needed">Templates: Bundled, No Project Setup Needed</h2>
+<p><strong>This plugin doesn't generate content from scratch — it duplicates a template and retargets it.</strong> In earlier versions (v1.0) the templates had to already exist in the project's own <code>Content/</code> folder; <strong>since v1.1 that is no longer required.</strong> The template assets (a working OA_/CA_ outfit set, and a groom's GroomMesh/Materials set) are <strong>bundled inside the plugin's own content</strong> under <code>/MetaBridgeForge/Templates/</code> (both fully self-contained — verified to have zero external <code>/Game/</code> dependencies, and verified end-to-end by running both pipelines cloning from the bundled copies), so in a fresh project the plugin works out of the box with no setup.</p>
+<p>Template resolution order (automatic, per run):</p>
+<ol>
+<li><strong>Project override first</strong> — if the project has its own template at <code>/Game/Outfits/&lt;OUTFIT_TEMPLATE_DEFAULT&gt;/</code> (with a real OA_ inside) or at <code>GROOM_TEMPLATE_FOLDER</code>, that one is used.</li>
+<li><strong>Plugin fallback</strong> — otherwise the bundled copy under <code>/MetaBridgeForge/Templates/</code> is used. (Leftover redirectors from moving templates around do not count as a project override — the resolver checks for real assets.)</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Setting (<code>Content/Python/mbforge/config.py</code>)</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>OUTFIT_TEMPLATE_DEFAULT</code></td>
+<td>Name of the template outfit (default <code>"BasicOutfit"</code>) — used for both the project-override lookup and the plugin-bundled lookup</td>
+</tr>
+<tr>
+<td><code>GROOM_TEMPLATE_FOLDER</code></td>
+<td>Project-override path for the groom template (default <code>"/Game/Grooms/Beard_A/Beard_A"</code>)</td>
+</tr>
+<tr>
+<td><code>PLUGIN_GROOM_TEMPLATE_FOLDER</code></td>
+<td>Plugin-bundled groom template path — only change if you rebundle a different groom into the plugin</td>
+</tr>
+</tbody>
+</table>
+<p>To see the bundled templates in the Content Browser, enable <strong>Settings &gt; Show Plugin Content</strong>.</p>
+<p>If no template can be found in either location, nothing crashes — the run fails immediately with a "template not found" error in the log.</p>
+<h3 id="how-to-edit-configpy-optional-only-for-using-your-own-project-templates">How to edit config.py (optional — only for using your own project templates)</h3>
+<p>With the bundled templates, no config editing is required. Edit <code>Plugins/MetaBridgeForge/Content/Python/mbforge/config.py</code> only if you want a specific project template to take priority over the bundled one. Only the paths/names inside the quotes need to change.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># 1) Outfit template name - if &quot;/Game/Outfits/&lt;this name&gt;/&quot; contains a real OA_, it wins over the bundled template</span>
+<span class="n">OUTFIT_TEMPLATE_DEFAULT</span> <span class="o">=</span> <span class="s2">&quot;BasicOutfit&quot;</span>        <span class="c1"># → e.g. &quot;MyTemplateOutfit&quot;</span>
+
+<span class="c1"># 2) Groom template folder - if this folder contains real assets, it wins over the bundled template</span>
+<span class="n">GROOM_TEMPLATE_FOLDER</span> <span class="o">=</span> <span class="s2">&quot;/Game/Grooms/Beard_A/Beard_A&quot;</span>   <span class="c1"># → e.g. &quot;/Game/Grooms/MyTemplateGroom/MyTemplateGroom&quot;</span>
+</code></pre></div>
+<p>Tip for finding the exact path: right-click the folder/asset in the Content Browser → <strong>Copy Reference</strong> to get the full, exact path.</p>
+<p>You don't need to restart the editor after changing values — it may already be picked up the next time you click a menu item, but to be sure, reload it from the Python console:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">importlib</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">mbforge</span><span class="w"> </span><span class="kn">import</span> <span class="n">config</span>
+<span class="n">importlib</span><span class="o">.</span><span class="n">reload</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="import-outfit-fbx">Import Outfit FBX...</h2>
+<ol>
+<li>Click the menu → pick the garment FBX file</li>
+<li>What happens automatically:</li>
+<li>Imports the garment as a Static Mesh + duplicates the template's reference body (<code>/Game/Outfits/&lt;name&gt;/&lt;name&gt;/Meshes/</code>)</li>
+<li>Duplicates the template OA_/CA_ (+ their own Dataflow graphs) wholesale (<code>/Game/Outfits/&lt;name&gt;/</code>)</li>
+<li>Retargets the duplicated CA_'s mesh references and the OA_'s <code>SizedOutfitSource</code> to point at the newly imported mesh</li>
+<li>Creates <code>WI_&lt;name&gt;</code> Wardrobe Item + runs verification</li>
+<li>The outfit name is auto-derived from the FBX filename (special characters replaced with <code>_</code>).</li>
+<li>On success, only a log entry is written (Output Log) — no popup. On failure, an error popup appears with details in the Output Log.</li>
+</ol>
+<h2 id="import-groom-abc">Import Groom ABC...</h2>
+<ol>
+<li>Click the menu → pick the hair Alembic (.abc) file</li>
+<li>What happens automatically:</li>
+<li>Clones the GroomMesh/Materials template files + imports the .abc as the groom asset (<code>/Game/Grooms/&lt;name&gt;/</code>)</li>
+<li>Creates a binding (<code>GB_&lt;name&gt;</code>) onto the cloned reference head</li>
+<li>Creates the <code>WI_&lt;name&gt;</code> Wardrobe Item</li>
+<li>The groom name is auto-derived from the .abc filename.</li>
+<li>On success, only a log entry is written — no popup. On failure, an error popup appears.</li>
+</ol>
+<h2 id="out-of-automated-scope-manual-work">Out of Automated Scope (manual work)</h2>
+<p>The following were deliberately left manual, since they need case-by-case judgment:</p>
+<ul>
+<li>Mesh retargeting for the compound case of an outfit with multiple CA_'s (call <code>duplicate_build.retarget_cloth_asset_meshes</code> / <code>retarget_outfit_source</code> directly from the Python console)</li>
+<li>Assigning a finished <code>WI_</code> to an actual MetaHuman character's slot (<code>character.internal_collection.try_add_item_from_wardrobe_item(slot_name=..., wardrobe_item=wi_asset)</code>)</li>
+<li>Groom hair color/material customization</li>
+</ul>
+<h2 id="if-something-goes-wrong">If Something Goes Wrong</h2>
+<ol>
+<li>Check the Output Log for lines starting with <code>MetaBridge Forge:</code> (<strong>Window &gt; Developer Tools &gt; Output Log</strong>)</li>
+<li>Each pipeline function can be called directly from the Python console to re-run just one step, e.g.:
+   <div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">mbforge</span><span class="w"> </span><span class="kn">import</span> <span class="n">duplicate_build</span><span class="p">,</span> <span class="n">groom</span><span class="p">,</span> <span class="n">wardrobe</span>
+<span class="n">duplicate_build</span><span class="o">.</span><span class="n">retarget_duplicated_outfit</span><span class="p">(</span><span class="s2">&quot;MyOutfitName&quot;</span><span class="p">,</span> <span class="n">garment_mesh</span><span class="p">,</span> <span class="n">body_mesh</span><span class="p">)</span>
+<span class="n">groom</span><span class="o">.</span><span class="n">finish_groom_setup</span><span class="p">(</span><span class="s2">&quot;MyGroomName&quot;</span><span class="p">)</span>
+<span class="n">wardrobe</span><span class="o">.</span><span class="n">finish_outfit_setup</span><span class="p">(</span><span class="s2">&quot;MyOutfitName&quot;</span><span class="p">)</span>
+</code></pre></div></li>
+</ol>
+<h2 id="moving-to-another-projectcomputer">Moving to Another Project/Computer</h2>
+<p><strong>Zipping up the plugin folder (<code>Plugins/MetaBridgeForge/</code>) is enough</strong> — the template assets are bundled inside the plugin's <code>Content/Templates/</code> folder, so nothing else needs to be migrated. Checklist:</p>
+<ol>
+<li>Copy the entire <code>Plugins/MetaBridgeForge/</code> folder into the target project's <code>Plugins/</code> folder.</li>
+<li>If <code>Binaries/Win64/</code> is included, it works without a rebuild as long as the <strong>engine version is exactly the same</strong> (currently UE 5.8, same build as the Epic Games Launcher install).</li>
+<li><code>Intermediate/</code> and <code>Content/Python/**/__pycache__/</code> are build/runtime cache — no need to bring these along (safe to exclude from the zip).</li>
+<li>If the engine version differs, <code>Source/</code> must be included, and the target machine will automatically trigger a one-time rebuild.</li>
+<li><strong>Do include <code>Content/Templates/</code></strong> — that's the bundled template data the pipelines clone from.</li>
+<li>Confirm the target project's <code>.uproject</code> has the <code>ChaosOutfitAsset</code> and <code>ChaosClothAsset</code> engine plugins set to <code>Enabled: true</code>.</li>
+<li>(Optional) If the target project has its own, better-fitting template outfit/groom, point <code>config.py</code>'s <code>OUTFIT_TEMPLATE_DEFAULT</code> / <code>GROOM_TEMPLATE_FOLDER</code> at it — project templates always take priority over the bundled ones.</li>
+</ol>
+<h2 id="version">Version</h2>
+<p><strong>v1.1</strong> — Template content (<code>BasicOutfit</code> outfit set, <code>Beard_A</code> groom set) moved into the plugin's own <code>Content/Templates/</code>, with project-first/plugin-fallback resolution — pre-existing base templates in the project are no longer required; the plugin works out of the box in a fresh project. Both pipelines verified end-to-end cloning from the bundled templates. Candidates for the next version: multi-CA_ support, automatic character-slot assignment, head accessories.</p>
+<p><strong>v1.0</strong> — Outfit/groom one-shot import pipelines complete. Unused dead code removed (<code>BODY_SKELETON_PATH</code>/<code>HEAD_SKELETON_PATH</code> in <code>config.py</code>, <code>confirm()</code> in <code>dialogs.py</code>).</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="integration/" class="btn btn-neutral float-right" title="Strategy & Pipeline">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+      <span><a href="integration/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = ".";</script>
+    <script src="js/theme_extra.js"></script>
+    <script src="js/theme.js"></script>
+      <script src="search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

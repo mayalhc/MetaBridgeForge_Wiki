@@ -32,7 +32,7 @@ extra_css:
 nav:
   - MetaBridgeForge Guide:
     - "Welcome to MetaBridgeForge": index.md # 상위 메뉴 클릭 시 바로 보일 파일
-    - "Strategy & Pipeline": groomforge.md
+    - "Strategy & Pipeline": integration.md
 #   - "Workflow": workflow.md
 #   - "Technical Manual": technical.md
 #   - "Troubleshooting (FAQ)": faq.md

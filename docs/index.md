@@ -1,10 +1,28 @@
-# MetaBridge Forge — User Guide (v1.1)
+# MetaBridge Forge — User Guide (v1.1.1)
 
 ![MetaBridgeForge04.png](assets/MetaBridgeForge04.png)
 
 An editor plugin that automates MetaHuman outfit (clothing) and groom (hair) preparation. Aside from picking one FBX/Alembic file, everything from import through Wardrobe Item creation and verification happens automatically, with no manual steps in between.
 
-**Zero setup required** — the template assets the pipelines are built on are bundled inside the plugin itself, so it works out of the box even in a brand-new project with an empty `Content/` folder. Just install the plugin and use the menu.
+**No project content setup required** — the template assets the pipelines are built on are bundled inside the plugin itself, so it works out of the box even in a brand-new project with an empty `Content/` folder. (You do need the MetaHuman Engine Component installed first — see Prerequisites below — that's a one-time Unreal Engine setup step, not something specific to this plugin.)
+
+## Prerequisites (check this before installing)
+
+This plugin depends on Epic's `MetaHumanCharacter` and `MetaHumanSDK` engine plugins. **These are not part of a default Unreal Engine 5.8 installation** — they only exist on disk if the optional **MetaHuman** Engine Component has been installed. If it hasn't, the editor will report missing/uninstalled MetaHuman components when this plugin is enabled.
+
+**How to check/install it:**
+1. Open the **Epic Games Launcher** → **Unreal Engine** tab → **Library**.
+2. Find your UE 5.8 install, click the **gear/settings icon** on it → **Options**.
+3. Make sure the **MetaHuman** component checkbox is checked. If it wasn't, check it and click **Apply** — this downloads and installs the component into that engine version (this is a one-time engine-level install, independent of any specific project).
+4. Restart the editor once it finishes.
+
+**If the install gets stuck in a "Queued" / "Resuming" loop that never finishes:** this is a known Epic Games Launcher download-manager issue, unrelated to this plugin. Things that commonly unstick it:
+- Fully close the Epic Games Launcher (check Task Manager for a lingering `EpicGamesLauncher` process) and reopen it.
+- Pause the download, wait a few seconds, then resume it.
+- Confirm you have enough free disk space for the component.
+- Run the Epic Games Launcher as Administrator.
+- Temporarily disable antivirus/firewall software that may be blocking the download, then retry.
+- As a last resort, use the engine's **Verify** option (same gear icon menu) to check for a corrupted install, or reinstall the Epic Games Launcher itself (this does not touch your projects or engine installs).
 
 ## Menu Location
 
@@ -105,10 +123,12 @@ The following were deliberately left manual, since they need case-by-case judgme
    - `Intermediate/` and `Content/Python/**/__pycache__/` are build/runtime cache — no need to bring these along (safe to exclude from the zip).
    - If the engine version differs, `Source/` must be included, and the target machine will automatically trigger a one-time rebuild.
    - **Do include `Content/Templates/`** — that's the bundled template data the pipelines clone from.
-2. Confirm the target project's `.uproject` has the `ChaosOutfitAsset` and `ChaosClothAsset` engine plugins set to `Enabled: true`.
+2. Confirm the target machine's UE 5.8 install has the **MetaHuman Engine Component** installed (see Prerequisites above) and that the target project's `.uproject` has the `ChaosOutfitAsset` and `ChaosClothAsset` engine plugins set to `Enabled: true`.
 3. (Optional) If the target project has its own, better-fitting template outfit/groom, point `config.py`'s `OUTFIT_TEMPLATE_DEFAULT` / `GROOM_TEMPLATE_FOLDER` at it — project templates always take priority over the bundled ones.
 
 ## Version
+
+**v1.1.1** — Documented the MetaHuman Engine Component prerequisite (see Prerequisites above) after a user hit a confusing "MetaHuman components not installed" error plus an unrelated Epic Games Launcher stuck-download bug on a fresh engine install. No code changes.
 
 **v1.1** — Template content (`BasicOutfit` outfit set, `Beard_A` groom set) moved into the plugin's own `Content/Templates/`, with project-first/plugin-fallback resolution — pre-existing base templates in the project are no longer required; the plugin works out of the box in a fresh project. Both pipelines verified end-to-end cloning from the bundled templates. Candidates for the next version: multi-CA_ support, automatic character-slot assignment, head accessories.
 

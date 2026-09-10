@@ -11,7 +11,12 @@ theme:
   sticky_navigation: true
   navigation_depth: 4
   titles_only: false
-
+  
+extra:
+  analytics:
+      provider: google
+      property: G-SNSJS19D0M
+      
 extra_css:
   - custom.css
 
